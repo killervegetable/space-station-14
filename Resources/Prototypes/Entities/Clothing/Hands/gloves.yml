@@ -108,6 +108,9 @@
     fiberMaterial: fibers-durathread
     fiberColor: fibers-regal-blue
   - type: FingerprintMask
+  - type: Tag
+    tags:
+    - gloves
 
 - type: entity
   parent: ClothingHandsBase
@@ -127,6 +130,9 @@
       coefficients:
         Slash: 0.95
   - type: FingerprintMask
+  - type: Tag
+    tags:
+    - gloves
 
 #### Medical
 - type: entity
@@ -142,6 +148,9 @@
   - type: Fiber
     fiberMaterial: fibers-latex
   - type: FingerprintMask
+  - type: Tag
+    tags:
+    - gloves
 
 - type: entity
   parent: ClothingHandsButcherable
@@ -171,6 +180,9 @@
     fiberMaterial: fibers-leather
     fiberColor: fibers-brown
   - type: FingerprintMask
+  - type: Tag
+    tags:
+    - gloves
 
 - type: entity
   parent: ClothingHandsBase
@@ -200,6 +212,9 @@
     fiberMaterial: fibers-leather
     fiberColor: fibers-black
   - type: FingerprintMask
+  - type: Tag
+    tags:
+    - gloves
 
 - type: entity
   parent: [ClothingHandsBase, BaseToggleClothing, BaseMajorContraband]
@@ -275,6 +290,9 @@
   - type: Insulated
   - type: Fiber
     fiberMaterial: fibers-insulative
+  - type: Tag
+    tags:
+    - gloves
 
 # can't parent combat gloves since they are butcherable
 - type: entity
@@ -326,6 +344,9 @@
     damageProtection:
       flatReductions:
         Heat: 0 # no protection
+  - type: Tag
+    tags:
+    - gloves
 
 - type: entity
   parent: ClothingHandsBase
@@ -448,7 +469,9 @@
   - type: GuideHelp
     guides:
     - Forensics
-
+  - type: Tag
+    tags:
+    - gloves
 # TODO Make lubed items not slip in hands
 - type: entity
   parent: ClothingHandsBase
@@ -464,3 +487,30 @@
     fiberMaterial: fibers-rubber
     fiberColor: fibers-yellow
   - type: FingerprintMask
+
+- type: entity
+  parent: ClothingHandsBase
+  id: Razorgloves
+  name: Самодельные перчатки с когтями.
+  description: Буквально прикреплённые изолентой грабли к перчаткам.
+  components:
+  - type: Sprite
+    sprite: Clothing/Hands/Gloves/Razorgloves.rsi
+  - type: Clothing
+    sprite: Clothing/Hands/Gloves/Razorgloves.rsi
+  - type: MeleeWeapon
+    attackRate: 1.5
+    damage:
+      types:
+        Blunt: 2
+        Slash: 7
+    soundHit:
+      collection: MetalThud
+    animation: WeaponArcFist
+    mustBeEquippedToUse: true
+  - type: Fiber
+    fiberMaterial: fibers-insulative
+  - type: FingerprintMask
+  - type: Construction
+    graph: Razorgloves
+    node: razorgloves

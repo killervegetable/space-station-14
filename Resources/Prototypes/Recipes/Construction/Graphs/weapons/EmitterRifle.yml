@@ -1,0 +1,31 @@
+﻿- type: constructionGraph
+  id: EmitterRifle
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: emitter
+          steps:
+            - material: Glass
+              amount: 1
+              doAfter: 1
+            - tag: Emitterboard
+              name: emitter machine board
+              icon:
+                sprite: Objects/Misc/module.rsi
+                state: engineering
+              doAfter: 1
+            - material: Cable
+              amount: 20
+              doAfter: 1
+            - material: MetalRod
+              amount: 6
+              doAfter: 1
+            - tag: PowerCellSmall
+              name: power cell small
+              icon:
+                sprite: Objects/Power/power_cells.rsi
+                state: small
+
+    - node: emitter
+      entity: EmitterRifle

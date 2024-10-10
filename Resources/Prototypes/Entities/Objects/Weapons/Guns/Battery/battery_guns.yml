@@ -380,7 +380,7 @@
 
 - type: entity
   name: x-ray cannon
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseSecurityContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponXrayCannon
   description: An experimental weapon that uses concentrated x-ray energy against its target.
   components:
@@ -720,7 +720,7 @@
 
 - type: entity
   name: energy shotgun
-  parent: [BaseWeaponBattery, BaseGunWieldable, BaseGrandTheftContraband]
+  parent: [BaseWeaponBattery, BaseGunWieldable]
   id: WeaponEnergyShotgun
   description: A one-of-a-kind prototype energy weapon that uses various shotgun configurations. It offers the possibility of both lethal and non-lethal shots, making it a versatile weapon.
   components:
@@ -764,3 +764,35 @@
   - type: Battery
     maxCharge: 800
     startingCharge: 800
+
+- type: entity
+  name: Самодельная эммитерная винтовка
+  parent: [BaseWeaponBattery, BaseGunWieldable]
+  id: EmitterRifle
+  description: Test Gun.
+  components:
+  - type: Sprite
+    sprite: Objects/Weapons/Guns/Battery/emmiter_gun.rsi
+    layers:
+    - state: base
+      map: ["enum.GunVisualLayers.Base"]
+    - state: mag-unshaded-4
+      map: ["enum.GunVisualLayers.MagUnshaded"]
+      shader: unshaded
+  - type: Clothing
+    sprite: Objects/Weapons/Guns/Battery/emmiter_gun.rsi
+  - type: Gun
+    fireRate: 0.3
+    soundGunshot:
+      path: /Audio/Weapons/emitter.ogg
+  - type: HitscanBatteryAmmoProvider
+    proto: Pulse
+    fireCost: 100
+  - type: Tag
+    tag: EmitterGun
+  - type: Battery
+    maxCharge: 1100
+    startingCharge: 1100
+  - type: Construction
+    graph: EmitterRifle
+    node: emitter

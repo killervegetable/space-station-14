@@ -1,0 +1,22 @@
+﻿- type: constructionGraph
+  id: Razorgloves
+  start: start
+  graph:
+    - node: start
+      edges:
+        - to: razorgloves
+          steps:
+            - material: MetalRod
+              amount: 6
+              doAfter: 2
+            - material: Cable
+              amount: 3
+              doAfter: 1
+            - tag: gloves
+              name: Перчатки
+              icon:
+                sprite: Clothing/Hands/Gloves/Color/black.rsi
+                state: icon
+
+    - node: razorgloves
+      entity: Razorgloves

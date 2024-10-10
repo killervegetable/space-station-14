@@ -603,6 +603,9 @@
   id: ExplosivePassable
 
 - type: Tag
+  id: Emitterboard
+
+- type: Tag
   id: Figurine
 
 - type: Tag
@@ -676,6 +679,9 @@
 
 - type: Tag
   id: GeigerCounter
+
+- type: Tag
+  id: gloves
 
 - type: Tag
   id: GlassAirlock
@@ -1177,7 +1183,7 @@
 - type: Tag
   id: SecureWindoor
 
-- type: Tag  
+- type: Tag
   id: SecurityHelmet
 
 - type: Tag
@@ -1433,3 +1439,4 @@
   id: WriteIgnoreStamps
 
 # ALPHABETICAL
+# XYI TEBE A NE ALPHABETICAL

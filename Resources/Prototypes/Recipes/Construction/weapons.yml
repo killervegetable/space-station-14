@@ -153,28 +153,6 @@
   objectType: Item
 
 - type: construction
-  name: plasma glass shard arrow
-  id: ImprovisedArrowPlasma
-  graph: ImprovisedArrowPlasma
-  startNode: start
-  targetNode: ImprovisedArrowPlasma
-  category: construction-category-weapons
-  description: An arrow tipped with pieces of a plasma glass shard, for use with a bow.
-  icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
-  objectType: Item
-
-- type: construction
-  name: uranium glass shard arrow
-  id: ImprovisedArrowUranium
-  graph: ImprovisedArrowUranium
-  startNode: start
-  targetNode: ImprovisedArrowUranium
-  category: construction-category-weapons
-  description: An arrow tipped with pieces of a uranium glass shard, for use with a bow.
-  icon: { sprite: Objects/Weapons/Guns/Bow/bow.rsi, state: wielded-arrow }
-  objectType: Item
-
-- type: construction
   name: improvised bow
   id: ImprovisedBow
   graph: ImprovisedBow
@@ -194,4 +172,26 @@
   category: construction-category-weapons
   description: Bones and silk combined together.
   icon: { sprite: Objects/Weapons/Melee/bone_spear.rsi, state: spear }
+  objectType: Item
+
+- type: construction
+  name: Перчатки с когтями
+  id: Razorgloves
+  graph: Razorgloves
+  startNode: start
+  targetNode: razorgloves
+  category: construction-category-weapons
+  description: Буквально прикреплённые кабелем обрубки металла к перчаткам, что бы вы могли косплеить росомаху.
+  icon: { sprite: Clothing/Hands/Gloves/Razorgloves.rsi, state: icon }
+  objectType: Item
+
+- type: construction
+  name: Handicraft Emitter Rifle
+  id: Emittergun
+  graph: EmitterRifle
+  startNode: start
+  targetNode: emitter
+  category: construction-category-weapons
+  description: A truly ingenious source of power.
+  icon: { sprite: Objects/Weapons/Guns/Battery/emmiter_gun.rsi, state: icon }
   objectType: Item
